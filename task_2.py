@@ -12,7 +12,7 @@ def create_schedule(subjects, teachers):
     chosen_teachers = []
     uncovered_subjects = subjects.copy()
 
-    for _ in range(len(subjects)):
+    for _ in range(len(teachers)):
         _teacher = max(teachers, key=lambda subset: len(subset.can_teach_subjects & uncovered_subjects))
 
         chosen_teachers.append(_teacher)
